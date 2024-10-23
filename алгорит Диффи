@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int mod(int x, int y, int z) {
+  int s = pow(x, y);
+  return(s % z);
+}
+
+int main(){
+  setlocale(LC_ALL, "RUS");
+  int g,p,xg,xa;
+  cout << "Введите число" << endl;cin >> g;
+  cout << "Введите модуль" << endl;cin >> p;
+  cout << "Загадонное число 1" << endl; cin >> xg;
+  cout << "Загадонное число 2" << endl; cin >> xa;
+  int Yg = mod(g, xg, p);  
+  int Ya = mod(g, xa, p);
+  cout << "Ключ 1:" << Yg << endl;
+  cout << "Ключ 2:" << Ya << endl;
+  int Kg = mod(Yg, xg, p);
+  int Ka = mod(Ya, xa, p);
+  cout << "Итоговый ключ Kg:" << Kg << " Или Ka:" << Ka << endl;
+  system("pause");
+  return 0;
+}
