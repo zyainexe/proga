@@ -1,0 +1,89 @@
+#include <iostream> 
+using namespace std;
+string z;
+string g;
+class Pryamougolnik{
+public:
+  int x, y;
+  void calc();
+  void aaaa();
+};
+class Crug{
+public:
+  int r;
+  void abab();
+  void baba();
+};
+class Treug{
+public:
+  int a,h,c;
+  void xxxx();
+  void cccc();
+};
+void Pryamougolnik::calc(){
+  int x, y;
+  cin >> x; cin >> y;
+  cout << 2 * (x + y) << endl;
+};
+void Pryamougolnik::aaaa(){
+  int x, y;
+  cin >> x; cin >> y;
+  cout << x * y << endl;
+};
+void Crug::abab(){
+  int r;
+  cin >> r;
+  cout << 2 * 3.14 * r << endl;
+};
+void Crug::baba(){
+  int r;
+  cin >> r;
+  cout << r * r * 3.14 << endl;
+};
+void Treug::xxxx(){
+  int a, h, c;
+  cin >> a; cin >> h; cin >> c;
+  cout << a + h + c;
+};
+void Treug::cccc(){
+  int a, h;
+  cin >> a; cin >> h;
+  cout << a * h / 2;
+};
+int main(){
+  setlocale(LC_ALL, "");
+  cin >> z;
+  if (z == "Crug"){
+    cin >> g;
+    if (g == "Perimetr"){
+      Crug skibi;
+      skibi.abab();
+    }
+    if (g == "Ploshad"){
+      Crug skib;
+      skib.baba();
+    }
+  }
+  if (z == "Pryamougolnik"){
+    cin >> g;
+    if (g == "Perimetr"){
+      Pryamougolnik skibidi;
+      skibidi.calc();
+    }
+    if (g == "Ploshad") {
+      Pryamougolnik skibid;
+      skibid.aaaa();
+    }
+  }
+  if (z == "Treug") {
+    cin >> g;
+    if (g == "Perimetr"){
+      Treug ski;
+      ski.xxxx();  
+    }
+    if (g == "Ploshad"){
+      Treug sk;
+      sk.cccc();
+    }
+  }
+}
