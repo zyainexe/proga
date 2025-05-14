@@ -1,0 +1,61 @@
+#include <iostream> 
+using namespace std;
+string z;
+class Studenti {
+public:
+    int gr, gp, om, of, oi;
+    string fio;
+    void Petrov();
+    void Latova();
+    void Topov();
+};
+void Studenti::Petrov() {
+    int gr, gp, om, of, oi;
+    string fio;
+    fio = "Петров Алексей Сергеевич";
+    gr = 2005;
+    gp = 2023;
+    om = 4;
+    of = 4;
+    oi = 4;
+    cout << fio << endl << "Возраст =" << char(32) << 2024 - gr << endl << "Курс=" << (char)32 << 2024 - gp << endl << "Средний балл =" << (char)32 << (om + of + oi) / 3;
+};
+void Studenti::Latova() {
+    int gr, gp, om, of, oi;
+    string fio;
+    fio = "Латова Екатерина Михайловна";
+    gr = 2002;
+    gp = 2020;
+    om = 5;
+    of = 5;
+    oi = 5;
+    cout << fio << endl << "Возраст =" << char(32) << 2024 - gr << endl << "Курс=" << (char)32 << 2024 - gp << endl << "Средний балл =" << (char)32 << (om + of + oi) / 3;
+};
+void Studenti::Topov() {
+    int gr, gp, om, of, oi;
+    string fio;
+    fio = "Топов Константин Олегович";
+    gr = 2003;
+    gp = 2021;
+    om = 5;
+    of = 4;
+    oi = 4;
+    cout << fio << endl << "Возраст =" << char(32) << 2024 - gr << endl << "Курс=" << (char)32 << 2024 - gp << endl << "Средний балл =" << (char)32 << (om + of + oi) / 3;
+};
+int main() {
+    setlocale(LC_ALL, "");
+    cin >> z;
+    if (z == "Petrov") {
+        Studenti info;
+        info.Petrov();
+    }
+    if (z == "Latova") {
+        Studenti info;
+        info.Latova();
+    }
+    if (z == "Topov") {
+        Studenti info;
+        info.Topov();
+    }
+
+}
