@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int x = 0;
+class CHET {
+public:
+    int z;
+    void plus() {
+        cout << "Введите число" << endl;
+        cin >> z;
+        x = x + z;
+    }
+    void minus() {
+        cout << "Введите число" << endl;
+        cin >> z;
+        x = x - z;
+    }
+    void stop() {
+        cout << "Конечное значение счетчика равно " << x << endl;
+    }
+};
+int main() {
+    setlocale(LC_ALL, "RUS");
+    for (int i = 0; i < 99; i++) {
+        cout << "Счетчик равен = " << x << endl;
+        string z;
+        cout << "Поменять значение счетчика?(+ или -) или оставить текущее(stop)" << endl;
+        cin >> z;
+        if (z == "stop") {
+            CHET s;
+            s.stop();
+            return 0;
+        }
+        if (z == "+") {
+            CHET s;
+            s.plus();
+        }
+        if (z == "-") {
+            CHET s;
+            s.minus();
+        }
+    }
+}
