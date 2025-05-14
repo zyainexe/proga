@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+class DVEPER {
+public:
+    int x;
+    int y;
+    int s;
+    int b;
+    void lol() {
+        cout << "введите x" << endl;
+        cin >> x;
+        cout << "введите y" << endl;
+        cin >> y;
+        cout << "x = " << x << endl;
+        cout << "y = " << y << endl;
+    }
+    void change() {
+        cout << "поменяйте x" << endl;
+        cin >> b;
+        cout << "поменяйте y" << endl;
+        cin >> s;
+        x = b;
+        y = s;
+        cout << "x = " << x << endl;
+        cout << "y = " << y << endl;
+    }
+    void compare() {
+        if (x > y) {
+            cout << "x > y на " << x - y << endl;
+        }
+        if (y > x) {
+            cout << "y > x на " << y - x << endl;
+        }
+        if (y == x) {
+            cout << "y = x = " << y << endl;
+        }
+    }
+};
+int main() {
+    setlocale(LC_ALL, "RUS");
+    DVEPER z;
+    z.lol();
+    string l;
+    cout << "Оставить(EXIT) или Поменять(CHANGE)?" << endl;
+    cin >> l;
+    if (l == "EXIT") {
+    }
+    if (l == "CHANGE") {
+        z.change();
+    }
+    string k;
+    cout << "Оставить(EXIT) или Сравнить(COMPARE)?" << endl;
+    cin >> k;
+    if (k == "EXIT") {
+    }
+    if (k == "COMPARE") {
+        z.compare();
+    }
+}
