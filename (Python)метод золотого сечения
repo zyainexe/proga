@@ -1,0 +1,23 @@
+import math
+def f(x):
+    return 4*x**2 - x + 0.25
+a = 0
+b = 5
+eps = 0.0001
+def zolsech(a, b, eps):
+    zs = (1 + math.sqrt(5)) / 2
+    x1 = b - (b - a) / zs
+    x2 = a + (b - a) / zs
+
+    while (b - a) > eps:
+        if f(x1) < f(x2):
+            b = x2
+        else:
+            a = x1
+
+        x1 = b - (b - a) / zs
+        x2 = a + (b - a) / zs
+    return (a + b) / 2
+min = zolsech(a, b, eps)
+print(min)
+print(f(min))
