@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class Mashini {
+public:
+  string Marka;
+  string Model;
+  int Power;
+};
+int main() {
+  setlocale(LC_ALL, "");
+  Mashini objfff1;
+  Mashini objfff2;
+  Mashini objfff3;
+
+  objfff1.Marka = "Lada";
+  objfff1.Model = "Granta";
+  objfff1.Power = 116;
+
+  objfff2.Marka = "Honda";
+  objfff2.Model = "Civic";
+  objfff2.Power = 10000;
+
+  objfff3.Marka = "Toyota";
+  objfff3.Model = "Ae86";
+  objfff3.Power = 124;
+
+  if (objfff1.Power > objfff2.Power and objfff1.Power > objfff3.Power) { cout << objfff1.Marka << (char)32 << objfff1.Model; }
+  if (objfff2.Power > objfff1.Power and objfff2.Power > objfff3.Power) { cout << objfff2.Marka << (char)32 << objfff2.Model; }
+    if (objfff3.Power > objfff2.Power and objfff3.Power > objfff1.Power) { cout << objfff3.Marka << (char)32 << objfff3.Model; }
+
+ }
