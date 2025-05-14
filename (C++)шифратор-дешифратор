@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int i;
+	int k;
+	char ABC[] = { 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' };
+	char msg[80];
+	cout << "Enter word" << endl;
+	cin >> msg;
+	cout << "Enter shift" << endl;
+	cin >> k;
+	for (i = 0; i < strlen(msg); i++) {
+		msg[i] += k;
+	}
+	cout << msg << endl;
+	string j;
+	cout << "RETURN or EXIT\n";
+	cin >> j;
+	if (j == "RETURN") {
+		for (i = 0; i < strlen(msg); i++) {
+			msg[i] -= k;
+		}
+		cout << msg << endl;
+	}
+	if (j == "EXIT") {
+		return 0;
+	}
+}
