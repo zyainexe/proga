@@ -1,0 +1,23 @@
+import math
+def f(x, eps=0.0001):
+    return 4 * x ** 2 - x + 0.25
+def dichotomy(a, b, eps=0.0001, epss=0.00001):
+ steps = 0
+ while (b - a)/2 > eps:
+    steps+=1
+    epss = 0.00001
+    c1=(a+b-epss)/2
+    c2=(a+b+epss)/2
+    if f(c1) < f(c2):
+        b = c2
+    elif f(c2) < f(c1):
+        a = c1
+    return a+b/2
+a = 0
+b = 5
+eps = 0.0001
+epss = 0.00001
+min_x = dichotomy(a, b, eps, epss)
+min_y = f(min_x)
+print(min_x)
+print(min_y)
